@@ -4,7 +4,7 @@ import React from 'react'
 import { Text, TouchableOpacity } from 'react-native'
 const CustomButton = ({
     onPress,
-    title = "Press Button",
+    title = "Button",
     style ,
     textStyle,
     leftIcon,
@@ -13,7 +13,9 @@ const CustomButton = ({
 
   return (
     <TouchableOpacity className={cn('custom-btn', style)} onPress={onPress}>
-      <Text>CustomButton</Text>
+      <Text className={cn('text-white-100 paragraph-semibold ', textStyle)}>
+        {title}
+        </Text>
     </TouchableOpacity>
   )
 }
